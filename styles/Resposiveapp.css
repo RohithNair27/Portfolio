@@ -19,4 +19,13 @@
     width: 60%;
     height: 20%;
   }
+  #skillwrapper {
+    margin-top: 10%;
+  }
+  .skillsbody {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
 }
