@@ -1,12 +1,20 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-
+html {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
 body {
   margin: 0;
+  padding: 0;
   display: flex;
-  overflow-y: auto;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px black solid;
+  width: 100vw;
+  position: absolute;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 button {
@@ -17,13 +25,29 @@ button {
   cursor: pointer;
   font-size: 30px;
 }
-.introduction {
+#navigateTop {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: lightgray;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+#introduction,
+#footer {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100vh;
   align-items: center;
   justify-content: space-around;
+  cursor: pointer;
 }
 .introduction.show {
   opacity: 1;
@@ -43,7 +67,9 @@ button {
   font-size: 60px;
 }
 .introduction-text-body h1 {
+  align-self: center;
   font-size: 50px;
+  width: 100vw;
 }
 .introduction-text-body span {
   font-size: 20px;
@@ -55,6 +81,7 @@ button {
   border: none;
 }
 .contact {
+  min-width: 700px;
   width: 50%;
   height: 7%;
   display: flex;
@@ -70,27 +97,30 @@ button {
   border-radius: 10px;
   opacity: 0;
   transform: translateY(+20px);
+  min-width: 130px;
 }
-.contact-button1.show {
+#contact-button1.show {
   transition: 400ms ease-in-out;
   opacity: 1;
   transform: translateY(0);
 }
-.contact-button2.show {
+#contact-button2.show {
   transition: 500ms ease-in;
   opacity: 1;
   transform: translateY(0);
 }
-.contact-button3.show {
+#contact-button3.show {
   transition: 600ms ease-in;
   opacity: 1;
   transform: translateY(0);
 }
-.skillwrapper {
+#skillwrapper,
+#projectswrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: max-content;
   border: 1px lightgray solid;
   align-items: center;
   justify-content: space-around;
@@ -174,16 +204,17 @@ button {
 }
 .project-tech {
   background-color: lightgray;
-  width: max-content;
+  /* width: max-content; */
   padding: 3px;
   border-radius: 10px;
   align-self: center;
 }
-.experiences-wraper {
+#experiences-wraper {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 130vh;
+  /* min-height: 100vh; */
+  height: max-content;
   border: 1px lightgray solid;
   align-items: center;
   justify-content: space-evenly;
@@ -191,25 +222,28 @@ button {
 .experiences-container {
   /* border: 1px black solid; */
   width: 30%;
-  height: 70%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   /* margin-top: 50px; */
   /* justify-content: flex-start; */
 }
 .experiences-container-each {
-  /* border: 1px black solid; */
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 40vh;
   text-align: center;
+  /* border: 1px black solid; */
+  overflow: hidden;
 }
 .experiences-timeline {
   display: flex;
   flex-direction: column;
   width: 10px;
   align-items: center;
-  height: 100%;
+  height: 100vh;
+  /* border: 1px black solid; */
+  overflow: visible;
 }
 .experiences-info {
   /* border: 1px black solid; */
@@ -231,6 +265,7 @@ button {
 .line1 {
   width: 4px;
   background-color: black;
+  /* height: 40vh; */
   height: 100%;
 }
 .techstack {
