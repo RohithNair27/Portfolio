@@ -6,286 +6,66 @@
     <title>Rohith</title>
     <link rel="stylesheet" href="./styles/app.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <body>
+    <header id="header-body">
+      <h2><a href=".">Rohith.dev</a></h2>
+      <ul>
+        <li><a href="./Projects.html">Projects</a></li>
+        <li><a href="">Skills</a></li>
+        <li><a href="#">Experiences</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
     <section id="introduction">
-      <button id="navigateTop">&uarr;</button>
-      <div class="introduction-text-body one">
+      <div class="introduction-text-body">
         <h1>Hi, I'm Rohith K Nair</h1>
 
-        <span>
-          I build beautiful mobile experiences. Let's create something amazing
+        <span
+          >I build beautiful mobile experiences. Let's create something amazing
           together.
         </span>
       </div>
-      <div class="contact">
-        <button id="contact-button1">My skills</button>
-        <button id="contact-button2">My Projects</button>
-        <button id="contact-button3">My experiences</button>
-      </div>
-    </section>
-    <section id="skillwrapper">
-      <div class="introduction-text-body skill">
-        <h1>My skills</h1>
-        <span
-          >I'm experienced in React for web,React Native, Android development,
-          specializing in creating elegant and user-friendly interfaces.</span
-        >
-      </div>
-      <div class="skillsbody">
-        <section class="skill one">
-          <img
-            src="./assets/icons8-react-native.gif"
-            alt="react-icon"
-            style="width: 48px; height: 48px"
-            class="skill-icon"
-          />
-          <h2>React Native</h2>
-
-          <span
-            >Skilled in React Native, crafting cross-platform mobile apps with
-            seamless user experiences.</span
-          >
-        </section>
-        <section class="skill one">
-          <img
-            src="./assets/icons8-react.gif"
-            alt="react-icon"
-            style="width: 48px; height: 48px"
-            class="skill-icon"
-          />
-          <h2>ReactJS (Web)</h2>
-          <span
-            >Proficient in React.js, building dynamic web apps with efficient
-            component-based architecture.</span
-          >
-        </section>
-        <section class="skill two">
-          <img
-            src="./assets/icons8-android.svg"
-            alt="react-icon"
-            style="width: 48px; height: 48px"
-            class="skill-icon"
-          />
-          <h2>Android development</h2>
-          <span
-            >Proficient in Android, mastering core components, APIs, for
-            seamless app creation.</span
-          >
-        </section>
-        <section class="skill two">
-          <img
-            src="./assets/icons8-figma.gif"
-            alt="react-icon"
-            style="width: 48px; height: 48px"
-            class="skill-icon"
-          />
-          <h2>UI/UX Design</h2>
-          <span>
-            Proficient in UI/UX basics, ensuring intuitive design and seamless
-            user experiences for Mobile.</span
-          >
-        </section>
-      </div>
-      <!-- <button>&darr;</button> -->
-    </section>
-    <section id="projectswrapper">
-      <div class="introduction-text-body skill">
-        <h1>My Projects</h1>
-        <span>Explore my journey</span>
-      </div>
-      <div class="projectbody">
-        <section class="skill one project">
-          <div class="techprojects">
-            <span class="project-tech">React Native</span>
-
-            <h2>PomoDex - Todolist</h2>
-            <span>portfolio exemplifies their proficiency in development</span>
-          </div>
-          <div class="project_links">
-            <button class="project_link_github">Github</button>
-            <button class="project_link_appstore">Go to app store</button>
-          </div>
-        </section>
-        <section class="skill one project">
-          <div class="techprojects">
-            <span class="project-tech">React Native</span>
-
-            <h2>BusinessCardGenerator</h2>
-            <span>portfolio exemplifies their proficiency in development</span>
-          </div>
-          <div class="project_links">
-            <button class="project_link_github">Github</button>
-            <button class="project_link_appstore">Go to app store</button>
-          </div>
-        </section>
-        <section class="skill two project">
-          <div class="techprojects">
-            <span class="project-tech">HTML CSS</span>
-            <h2>Portfolio 2.0</h2>
-            <span>portfolio exemplifies their proficiency in development</span>
-          </div>
-          <div class="project_links">
-            <button class="project_link_github">Github</button>
-            <button class="project_link_appstore">Go to app store</button>
-          </div>
-        </section>
-        <section class="skill two project">
-          <div class="techprojects">
-            <span class="project-tech">React JS</span>
-
-            <h2>ImageLog - Attendence</h2>
-            <span>portfolio exemplifies their proficiency in development</span>
-          </div>
-
-          <div class="project_links">
-            <!-- <button class="project_link_github">Github</button> -->
-            <button class="project_link_appstore">Go to app store</button>
-          </div>
-        </section>
-      </div>
-    </section>
-    <section id="experiences-wraper">
-      <div class="introduction-text-body skill">
-        <h1>My experiences</h1>
-        <span
-          >Check out some of my recent projects. Each one showcases my skills
-          and attention to detail.</span
-        >
-      </div>
-      <div class="experiences-container">
-        <div class="experiences-container-each">
-          <section class="experiences-timeline">
-            <div class="circle1"></div>
-            <div class="line1"></div>
-          </section>
-          <section class="experiences-info">
-            <h2>Software analyst</h2>
-            <span>Capgemini</span>
-            <p>Sep 2022 - present</p>
-            <span class="experiences-info"
-              >I was part of a team focused on maintaining and resolving issues
-              for clients, diligently fixing their technical challenges to
-              uphold seamless functionality and user satisfaction.</span
-            >
-            <section class="techstack">
-              <img
-                src="./assets/icons8-react-native.gif"
-                alt="react-icon"
-                style="width: 48px; height: 48px"
-                class="skill-icon"
-              />
-              <img
-                src="./assets/icons8-redux.svg"
-                alt="react-icon"
-                style="width: 48px; height: 48px"
-                class="skill-icon"
-              />
-              <img
-                src="./assets/icons8-microsoft-sql-server.svg"
-                alt="react-icon"
-                style="width: 48px; height: 48px"
-                class="skill-icon"
-              />
-              <img
-                src="./assets/icons8-android.svg"
-                alt="react-icon"
-                style="width: 48px; height: 48px"
-                class="skill-icon"
-              />
+      <div class="phone">
+        <div class="screen">
+          <div class="profile">
+            <section class="top">
+              <div class="profile-pic">
+                <img src="./assets/person.svg" />
+              </div>
+              <button>Follow</button>
             </section>
-          </section>
-        </div>
-        <div class="experiences-container-each">
-          <section class="experiences-timeline">
-            <div class="circle1"></div>
-            <div class="line1"></div>
-          </section>
-          <section class="experiences-info">
-            <h2>Intern</h2>
-            <span>Capgemini</span>
-            <p>Jan 2022 - Mar 2022</p>
-            <span class="experiences-info"
-              >Led a team of freshers in developing and maintaining production
-              code for client website, while eagerly absorbing knowledge and
-              skills from experienced mentors</span
-            >
-
-            <section class="techstack">
-              <img
-                src="./assets/icons8-react.gif"
-                alt="react-icon"
-                style="width: 48px; height: 48px"
-                class="skill-icon"
-              />
-              <img
-                src="./assets/icons8-redux.svg"
-                alt="react-icon"
-                style="width: 48px; height: 48px"
-                class="skill-icon"
-              />
-              <img
-                src="./assets/icons8-javascript.gif"
-                alt="react-icon"
-                style="width: 48px; height: 48px"
-                class="skill-icon"
-              />
-              <img
-                src="./assets/icons8-code.gif"
-                alt="react-icon"
-                style="width: 48px; height: 48px"
-                class="skill-icon"
-              />
+            <section class="bottom">
+              <h2>Rohith K</h2>
+              <span>@RohithNair27 </span>
+              <p>
+                Hi, I'm Rohith! I'm a passionate front-end developer with a
+                focus on building beautiful and responsive web and mobile
+                applications.
+              </p>
+              <span
+                ><a class="fa fa-map-marker" style="font-size: 18px"></a
+                >Palakkad, Kerala, India</span
+              >
+              <span
+                ><a class="fa fa-chain" style="font-size: 18px"></a
+                >https://www.linkedin.com/in</span
+              >
+              <span
+                ><a class="fa fa-briefcase" style="font-size: 18px"></a
+                >Capgemini India</span
+              >
+              <span
+                ><a class="fa fa-calendar" style="font-size: 18px"></a
+                >27/11/2000</span
+              >
             </section>
-          </section>
+          </div>
         </div>
       </div>
-    </section>
-    <section id="footer">
-      <div class="introduction-text-body">
-        <h1>Contact me</h1>
-        <span>
-          Have a project in mind? Want to collaborate? Reach out to me in my
-          socials
-        </span>
-      </div>
-      <section class="techstack">
-        <img
-          src="./assets/icons8-twitter.svg"
-          alt="react-icon"
-          style="width: 48px; height: 48px"
-          class="skill-icon"
-        />
-        <img
-          src="./assets/icons8-linkedin-48.png"
-          alt="react-icon"
-          style="width: 48px; height: 48px"
-          class="skill-icon"
-        />
-        <a href="google.com">
-          <img
-            src="./assets/icons8-github-64.png"
-            alt="react-icon"
-            style="width: 48px; height: 48px"
-            class="skill-icon"
-          />
-        </a>
-      </section>
-      <!-- <div class="input-body">
-        <input
-          type="text"
-          class="small-input"
-          placeholder="Your email address"
-        />
-
-        <input type="text" class="large-input" placeholder="Message" />
-        <button>My skills</button>
-      </div> -->
     </section>
   </body>
   <script src="./src/app.js"></script>
