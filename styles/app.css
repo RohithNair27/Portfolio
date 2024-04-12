@@ -76,7 +76,8 @@ button {
   color: white;
 }
 
-#introduction {
+#introduction,
+#projectswrapper {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -160,15 +161,17 @@ button {
 .introduction-text-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  overflow: auto;
-  /* border: 1px black solid; */
+  height: 30vh;
   text-align: center;
+  position: relative;
+  bottom: 10%;
+  justify-self: center;
+  align-self: center;
+  white-space: nowrap;
 }
 
 .introduction-text-body h1 {
-  font-size: 6vw;
-  /* border: 1px black solid; */
+  font-size: 5.5vw;
 }
 .introduction-text-body span {
   font-size: 20px;
@@ -213,8 +216,7 @@ button {
   opacity: 1;
   transform: translateY(0);
 }
-#skillwrapper,
-#projectswrapper {
+#skillwrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -226,9 +228,6 @@ button {
 }
 #skillwrapper span {
   color: rgb(141, 141, 141);
-}
-#projectswrapper {
-  min-height: 120vh;
 }
 
 .skillsbody,
@@ -308,9 +307,7 @@ button {
   /* text-decoration: underline; */
   cursor: pointer;
 }
-#projectswrapper span {
-  color: rgb(141, 141, 141);
-}
+
 .project-tech {
   background-color: #f3f4f6;
   padding: 3px;
