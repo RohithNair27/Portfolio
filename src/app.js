@@ -4,23 +4,22 @@
 // <h1><a href=".">RK</a></h1>
 // <button>mode</button></div>`
 
-
+// for technologies
 const allTechnologies = [
-  { name: "Vue JS", image: "./assets/vue.svg", category: 'frontend' },
-  { name: "React JS", image: "./assets/react.svg", category: 'frontend' },
-  { name: "Vite", image: "./assets/vite.svg", category: 'frontend' },
-  { name: "Expo", image: "./assets/expo.svg", category: 'frontend' },
-  { name: "Javascript", image: "./assets/javascript.svg", category: 'frontend' },
-  { name: "Typescript", image: "./assets/typescript.svg", category: 'frontend' },
-  
-  { name: "Node js", image: "./assets/node.svg", category: 'backend' },
-  { name: "Express", image: "./assets/express.svg", category: 'backend' },
-  
-  { name: "Git", image: "./assets/git.svg", category: 'tools' },
-  { name: "Github", image: "./assets/github.svg", category: 'tools' },
-  { name: "Firebase", image: "./assets/firebase.svg", category: 'tools' },
-  { name: "VS Code", image: "./assets/vs-code.svg", category: 'tools' },
-  { name: "Android Studio", image: "./assets/android-studio.svg", category: 'tools' },
+  { name: "React Native", image: "./assets/react.svg", category: 'frontend', backgroundColor: "rgba(97, 218, 251, 0.1)"}, 
+  { name: "Vue JS", image: "./assets/vue.svg", category: 'frontend', backgroundColor: "rgba(65, 184, 131, 0.1)" }, // Teal
+  { name: "Vite", image: "./assets/vite.svg", category: 'frontend', backgroundColor: "rgba(236, 72, 153, 0.1)" }, // Pink
+  { name: "Expo", image: "./assets/expo.svg", category: 'frontend', backgroundColor:  "rgba(255, 255, 255)" }, // Blue
+  { name: "Javascript", image: "./assets/javascript.svg", category: 'frontend', backgroundColor: "rgba(255, 204, 0, 0.1)" }, // Yellow
+  { name: "React JS", image: "./assets/react.svg", category: 'frontend', backgroundColor: "rgba(97, 218, 251, 0.1)" }, // Light Blue
+  { name: "Typescript", image: "./assets/typescript.svg", category: 'frontend', backgroundColor: "rgba(0, 122, 204, 0.1)" }, // Blue
+  { name: "Node js", image: "./assets/node.svg", category: 'backend', backgroundColor: "rgba(64, 184, 74, 0.1)" }, // Green
+  { name: "Express", image: "./assets/express.svg", category: 'backend', backgroundColor: "rgba(255, 255, 255)" }, // White
+  { name: "Git", image: "./assets/git.svg", category: 'tools', backgroundColor: "rgba(255, 51, 51, 0.1)" }, // Red
+  { name: "Github", image: "./assets/github.svg", category: 'tools', backgroundColor: "rgba(255, 255, 255,0.5)" }, // White
+  { name: "Firebase", image: "./assets/firebase.svg", category: 'tools', backgroundColor: "rgba(255, 87, 34, 0.1)" }, // Orange
+  { name: "VS Code", image: "./assets/vs-code.svg", category: 'tools', backgroundColor: "rgba(0, 122, 204, 0.1)" }, // Blue
+  { name: "Android Studio", image: "./assets/android-studio.svg", category: 'tools', backgroundColor: "rgba(76, 175, 80, 0.1)" }, // Green
 ];
 
 const FrontendComponent = document.querySelector('.tech-stack-list-one');
@@ -35,8 +34,10 @@ allTechnologies.forEach((element) => {
   // Create the HTML content for each technology
   const htmlContent = `
     <li>
-      <div class="each-tech-stack-container ${element.category}">
-        <img src="${element.image}"/>
+      <div class="each-tech-stack-container ">
+      <div class="tech-stack-image-container" style="background-color:${element.backgroundColor} ;">
+      <img src="${element.image}" class="tech-stack-variable"/>
+      </div>
         <span>${element.name}</span>
       </div>
     </li>`;
@@ -51,47 +52,56 @@ allTechnologies.forEach((element) => {
   }
 });
 
-// Set the inner HTML for each component
+// Setting the inner HTML for each component
 FrontendComponent.innerHTML = frontendHtmlContent;
 BackendComponent.innerHTML = backendHtmlContent;
 ToolsComponent.innerHTML = toolsHtmlContent;
 
 
-
-// onScroll transform
-const observer = new IntersectionObserver(
-  function (entries) {
-    entries.forEach((entry) => {
-      entry.target.classList.toggle("show", entry.isIntersecting);
-      if (entry.isIntersecting) {
-        observer.unobserve(entry.target);
-      }
-    });
+//this is for Pages
+const allPages = [
+  { 
+    name: "Blog", 
+    description: "Read my latest thoughts and articles.", 
+    link: "blog.html" 
   },
-  {
-    threshold: 0.5,
+  { 
+    name: "Portfolio", 
+    description: "View my work and projects.", 
+    link: "portfolio.html" 
+  },
+  { 
+    name: "Spotify Playlist", 
+    description: "Listen to my favorite tracks.", 
+    link: "https://open.spotify.com/your-playlist-link" 
+  },
+  { 
+    name: "Let's Talk", 
+    description: "Reach out to me via email.", 
+    link: "mailto:your-email@example.com" 
   }
-);
-const classes = [
-  "#contact-button1",
-  "#contact-button2",
-  "#contact-button3",
-  ".skill.one",
-  ".skill.two",
-  ".circle1",
-  ".techstack",
 ];
-classes.forEach((className) => {
-  if (className.startsWith("#")) {
-    let elements = document.getElementById(className.slice(1));
-    observer.observe(elements);
-  } else {
-    let elements = document.querySelectorAll(className);
-    elements.forEach((element) => {
-      observer.observe(element);
-    });
-  }
-});
+
+const pageComponent = document.querySelector('.pages-list-one')
+let pageElement =''
+allPages.forEach((element)=>{
+  const htmlContent = `
+    <li>
+      <a class="each-page-stack-container" href="${element.link}" target="_blank">
+        <h5>${element.name}</h5>
+        <span>${element.description}</span>
+
+      </a>
+    </li>`;
+    pageElement+=htmlContent
+
+})
+pageComponent.innerHTML=pageElement
+
+
+
+
+
 
 // Scroll to a specific element
 function scrollToElement(targetElementId) {
