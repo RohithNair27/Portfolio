@@ -1,14 +1,31 @@
-//Keeping header consistant in all the pages using JS
-// const headerComponent = document.querySelector('header')
-// headerComponent.innerHTML=`<div>
-// <h1><a href=".">RK</a></h1>
-// <button>mode</button></div>`
+// Keeping header consistant in all the pages using JS
+const headerComponent = document.querySelectorAll('.header-body')
+headerComponent.forEach(header => {
+  header.innerHTML = `
+  <div>
+      <h1><a href=".">RK</a></h1>
+      <section>
+          <button>
+              <img src="./assets/lightmode.svg"/>
+          </button>
+          <button>
+              <img src="./assets/menu.svg"/>
+          </button>
+      </section>
+  </div>`;
+});
+
+const allPosts = []
+const postComponets = document.querySelector('.introduction-text-body-posts')
+// postComponets.innerHTML=
+
+
 
 // for technologies
 const allTechnologies = [
-  { name: "React Native", image: "./assets/react.svg", category: 'frontend', backgroundColor: "rgba(97, 218, 251, 0.1)"}, 
   { name: "Vue JS", image: "./assets/vue.svg", category: 'frontend', backgroundColor: "rgba(65, 184, 131, 0.1)" }, // Teal
-  { name: "Vite", image: "./assets/vite.svg", category: 'frontend', backgroundColor: "rgba(236, 72, 153, 0.1)" }, // Pink
+  { name: "React Native", image: "./assets/react.svg", category: 'frontend', backgroundColor: "rgba(97, 218, 251, 0.1)"}, 
+  { name: "Vite", image: "./assets/vite.svg", category: 'tools', backgroundColor: "rgba(236, 72, 153, 0.1)" }, // Pink
   { name: "Expo", image: "./assets/expo.svg", category: 'frontend', backgroundColor:  "rgba(255, 255, 255)" }, // Blue
   { name: "Javascript", image: "./assets/javascript.svg", category: 'frontend', backgroundColor: "rgba(255, 204, 0, 0.1)" }, // Yellow
   { name: "React JS", image: "./assets/react.svg", category: 'frontend', backgroundColor: "rgba(97, 218, 251, 0.1)" }, // Light Blue
@@ -87,10 +104,9 @@ let pageElement =''
 allPages.forEach((element)=>{
   const htmlContent = `
     <li>
-      <a class="each-page-stack-container" href="${element.link}" target="_blank">
-        <h5>${element.name}</h5>
+      <a class="each-page-stack-container" href="${element.link}">
+        <h1>${element.name}</h1>
         <span>${element.description}</span>
-
       </a>
     </li>`;
     pageElement+=htmlContent
@@ -110,20 +126,6 @@ function scrollToElement(targetElementId) {
     targetElement.scrollIntoView({ behavior: "smooth" });
   }
 }
-
-// const sections = [
-//   "skillwrapper",
-//   "projectswrapper",
-//   "experiences-wraper",
-//   "footer",
-// ];
-
-// document.getElementById("navigateBottom").addEventListener("click", () => {
-//   if (currentIndex <= sections.length - 1) {
-//     scrollToElement(sections[currentIndex]);
-//     currentIndex++;
-//   }
-// });
 
 document.getElementById("contact-button1").addEventListener("click", () => {
   scrollToElement("skillwrapper");
